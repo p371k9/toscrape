@@ -9,9 +9,9 @@ You can change where the download starts, so how many images are downloaded, by 
 To run, enter:
 
 
-`` `
+```
 scrapy crawl img
-`` `
+```
 
 The download location will be the downloads/files folder. (settings.py)
 
