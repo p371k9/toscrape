@@ -15,4 +15,10 @@ scrapy crawl img
 
 The download location will be the downloads/files folder. (settings.py)
 
+## control crawler
 
+The middleware controls the crawl and stops it if the "CONTROL_XPATH" condition is false. Once you have done the necessary things with the browser - in this case following a link - the crawl will continue after you hit Enter. Selenium with Firefox.
+
+```
+scrapy crawl control
+```

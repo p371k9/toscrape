@@ -10,4 +10,7 @@ class imgItem(scrapy.Item):
     # define the fields for your item here like:
     images = scrapy.Field()
     image_urls = scrapy.Field()
-
+    
+class BookItem(scrapy.Item):    
+    title = scrapy.Field()
+    price = scrapy.Field()
