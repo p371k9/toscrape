@@ -4,8 +4,26 @@
 <head>
 <body>
 <h1>Replacement page</h1>
+<h1></h1>
 <p>In particular, it replaces the following page:</p>
-<a href="http://books.toscrape.com/catalogue/sharp-objects_997/index.html">Sharp Objects</a> 
+
+<script>
+document.write('<a href="')
+var paramsString = window.location.search;
+var searchParams = new URLSearchParams(paramsString);
+document.write(searchParams.get('href'));
+document.write('">');
+document.write(searchParams.get('a'));
+document.write('</a>');
+</script>
 <hr/>
 </body>
 </html>
+<!--
+
+file:///home/pp/Projects/toscrape/toscrape/rep.html?href=http://books.toscrape.com/catalogue/soumission_998/index.html&a=Soumission
+
+<a href="http://books.toscrape.com/catalogue/sharp-objects_997/index.html">Sharp Objects</a>
+
+--> 
+

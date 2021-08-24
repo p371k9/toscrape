@@ -12,7 +12,6 @@ BOT_NAME = 'toscrape'
 SPIDER_MODULES = ['toscrape.spiders']
 NEWSPIDER_MODULE = 'toscrape.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'books (+http://www.yourdomain.com)'
 
@@ -50,8 +49,16 @@ ROBOTSTXT_OBEY = False  #True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
+#SELENIUM_DRIVER_NAME = 'firefox'   # 'chrome'
+#SELENIUM_DRIVER_EXECUTABLE_PATH = '/home/pp/Projects/geckodriver'  #chromedriver'
+#SELENIUM_BROWSER_EXECUTABLE_PATH = '/usr/bin/chromium' 
+#SELENIUM_DRIVER_ARGUMENTS = ['user-data-dir"=/home/pp/.cache/chromium/Default']
+# g2gf3r19.selen', '-no-remote
+#SELENIUM_DRIVER_ARGUMENTS = []
 #DOWNLOADER_MIDDLEWARES = {
     # 'books.middlewares.BooksDownloaderMiddleware': 543,    
+    #'scrapy_selenium.SeleniumMiddleware': 800,
+#    'toscrape.middlewares.FoxMiddleware': 800,
 #}
 
 # Enable or disable extensions

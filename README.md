@@ -22,3 +22,12 @@ The middleware controls the crawl and stops it if the "CONTROL_XPATH" condition 
 ```
 scrapy crawl control
 ```
+
+## login crawler
+
+Crawl & scrap quotes from quotes.toscrape.com/login
+Programmed login.
+
+```
+scrapy crawl login
+```

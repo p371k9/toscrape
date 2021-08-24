@@ -5,7 +5,10 @@
 
 import scrapy
 
-
+class QuoteItem(scrapy.Item):    
+    author = scrapy.Field()
+    text = scrapy.Field()
+    
 class imgItem(scrapy.Item):
     # define the fields for your item here like:
     images = scrapy.Field()
@@ -14,3 +17,8 @@ class imgItem(scrapy.Item):
 class BookItem(scrapy.Item):    
     title = scrapy.Field()
     price = scrapy.Field()
+    rating = scrapy.Field()
+    availability = scrapy.Field()
+    upc = scrapy.Field()
+    
+        

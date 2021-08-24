@@ -19,7 +19,7 @@ class ImgSpider(CrawlSpider):
     # start_urls = ['http://books.toscrape.com/']    # All images will be downloaded. 1000 pieces.
     
     rules = (
-        Rule(LinkExtractor(restrict_xpaths=r'//li[contains(@class, "next")]'), callback='parse_catalogue', follow=True),
+        Rule(LinkExtractor(restrict_xpaths=r'//li[@class="next"]'), callback='parse_catalogue', follow=True),
         Rule(LinkExtractor(allow=r'index.html', deny=[r'category', r'//books.toscrape.com/index.html']), callback='parse_book', follow=False),    
     )    
     bookUrls = list()
