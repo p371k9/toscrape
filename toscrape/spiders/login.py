@@ -7,7 +7,7 @@ def authentication_failed(response):
     print("Auth Oké.")
     return False
 
-from scrapy.shell import inspect_response
+#from scrapy.shell import inspect_response
 
 class LoginSpider(scrapy.Spider):
     name = 'login'

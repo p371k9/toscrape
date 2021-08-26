@@ -20,7 +20,7 @@ The download location will be the downloads/files folder. (settings.py)
 The middleware controls the crawl and stops it if the "CONTROL_XPATH" condition is false. Once you have done the necessary things with the browser - in this case following a link - the crawl will continue after you hit Enter. Selenium with Firefox.
 
 ```
-scrapy crawl control
+scrapy crawl control -o books.json
 ```
 
 ## login crawler
@@ -31,3 +31,21 @@ Programmed login.
 ```
 scrapy crawl login
 ```
+
+## scroll crawler
+
+Scrape a web page that operates with infinite scroll. http://quotes.toscrape.com/scroll
+The API needs to be extracted! 
+![Screenshot](toscrape/inspector.png)
+
+Which in this case is in JSON format: 
+![Screenshot](toscrape/json.png)
+
+It's pretty simple.
+
+```
+scrapy crawl scroll -o quotes.csv
+```
+
+
+
