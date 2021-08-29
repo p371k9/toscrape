@@ -34,9 +34,9 @@ class LoginSpider(scrapy.Spider):
             item["text"] = sect.xpath('span[@class="text"]/text()').get()
             item["author"] = sect.xpath('span/small[@class="author"]/text()').get()
             yield item
-        hh = response.xpath("//li[@class='next']/a/@href").extract()
-        self.logger.debug(hh[0])
+        hh = response.xpath("//li[@class='next']/a/@href").extract()        
         if len(hh):
+            self.logger.debug(hh[0])
             u = response.urljoin(hh[0])
             self.logger.debug('*****next url********: ' + u)                    
             yield response.follow(url=u, callback=self.after_login)

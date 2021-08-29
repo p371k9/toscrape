@@ -10,7 +10,7 @@ To run, enter:
 
 
 ```
-scrapy crawl img
+$ scrapy crawl img
 ```
 
 The download location will be the downloads/files folder. (settings.py)
@@ -20,7 +20,7 @@ The download location will be the downloads/files folder. (settings.py)
 The middleware controls the crawl and stops it if the "CONTROL_XPATH" condition is false. Once you have done the necessary things with the browser - in this case following a link - the crawl will continue after you hit Enter. Selenium with Firefox.
 
 ```
-scrapy crawl control -o books.json
+$ scrapy crawl control -o books.csv
 ```
 
 ## login crawler
@@ -29,7 +29,7 @@ Crawl & scrap quotes from quotes.toscrape.com/login
 Programmed login.
 
 ```
-scrapy crawl login
+$ scrapy crawl login
 ```
 
 ## scroll crawler
@@ -44,8 +44,19 @@ Which in this case is in JSON format:
 It's pretty simple.
 
 ```
-scrapy crawl scroll -o quotes.csv
+$ scrapy crawl scroll -o quotes.json
 ```
 
+## random crawler
 
 
+
+Scrape off all random quotes from http://quotes.toscrape.com/random . Keeps only unique quotes. The website contains 100 citations. It takes about five hundred request-s for all citations to be queued. 
+
+![Screenshot](toscrape/random.png)
+
+But scraping can be safely interrupted with the Ctrl-C key. It is recommended to press it only once. In this case, the contents of the output file are not lost either.
+
+```
+$ scrapy crawl random -o egy.json
+```

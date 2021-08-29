@@ -8,6 +8,7 @@ import scrapy
 class QuoteItem(scrapy.Item):    
     author = scrapy.Field()
     text = scrapy.Field()
+    tags = scrapy.Field()
     
 class imgItem(scrapy.Item):
     # define the fields for your item here like:
