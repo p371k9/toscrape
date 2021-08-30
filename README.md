@@ -60,3 +60,18 @@ But scraping can be safely interrupted with the Ctrl-C key. It is recommended to
 ```
 $ scrapy crawl random -o egy.json
 ```
+
+## js crawler
+
+Scraping JS generated content. The information can be extracted from JavaScript code.
+
+It scrapes off both sites: http://quotes.toscrape.com/js as well as http://quotes.toscrape.com/js-delayed .
+
+```
+$ scrapy crawl js -o quotes.csv
+```
+
+
+
+
+
