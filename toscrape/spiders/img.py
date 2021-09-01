@@ -25,19 +25,19 @@ class ImgSpider(CrawlSpider):
     bookUrls = list()
     
     def parse_catalogue(self, response):
-        self.logger.info('*********')
-        self.logger.info(response.xpath('//title/text()').get())        
+        self.logger.debug('*********')
+        self.logger.debug(response.xpath('//title/text()').get())        
         for h in response.xpath('//h3/a/@href').extract():            
             self.bookUrls.append(response.urljoin(h))            
-        self.logger.info(self.bookUrls)        
+        self.logger.debug(self.bookUrls)        
         #inspect_response(response, self)        
         
     def parse_start_url(self, response):
         return self.parse_catalogue(response)    
 
     def parse_book(self, response):
-        self.logger.info('==========')
-        self.logger.info(response.xpath('//title/text()').get())
+        self.logger.debug('==========')
+        self.logger.debug(response.xpath('//title/text()').get())
         item = imgItem()
         item["image_urls"] = [response.urljoin(response.css("div.item.active > img::attr(src)").extract_first())]
         item["images"] = ['{:04d}.jpg'.format(self.bookUrls.index(response.request.url) + 1)]

@@ -52,7 +52,7 @@ class ControlSpider(scrapy.Spider):
                 break
         item['upc'] = response.xpath('//th[contains(text(), "UPC")]/following::td[1]/text()').get()
         item['availability'] = response.xpath('//th[contains(text(), "Availability")]/following::td[1]/text()').get()
-        self.logger.info('********* Item values: %s' % item)        
+        #self.logger.info('********* Item values: %s' % item)        
         #inspect_response(response, self)
         yield item
         
