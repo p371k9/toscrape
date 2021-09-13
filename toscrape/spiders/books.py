@@ -6,7 +6,7 @@ class BooksSpider(ControlSpider):
     name = 'books'
     custom_settings = {
         'DOWNLOADER_MIDDLEWARES': {
-            'toscrape.middlewares.ProxyMiddleware': 800
+            'toscrape.middlewares.TorMiddleware': 800
         }
     };
     

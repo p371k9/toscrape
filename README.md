@@ -89,5 +89,12 @@ scrapy crawl books -a lll='toscrape/10.lll'
 
 ```
 
-It even includes a simple and optional tor middleware. When configuring the middleware, pay attention to the following: privoxy port, tor port, tor password.
+It even includes a simple and optional tor middleware. 
+
+After each GET, it changes its IP address.
+
+The following Scrapy settings can be used: TORCTRL = control port, TORPWD = password TORPROXIES = settings for requests.get.
+If you start TOR with default settings, it is enough to set TORPWD. Here you have to enter the HASH-ed password in torrc.
+We use the requests function instead of Scrapy/Twisted request because it knows SOCKS. Therefore, there is no need for Privoxy either.
+
 

@@ -28,7 +28,7 @@ class ControlSpider(scrapy.Spider):
         'LOG_LEVEL': 'INFO',  # Selenium profile copy fillout the console
         'DOWNLOADER_MIDDLEWARES': {
             # settings in FoxMiddleware
-            'toscrape.middlewares.FoxMiddleware': 800,
+            'toscrape.middlewares.FoxMiddleware': 800, ## comment out this line if you want to use the original selenium-scrapy middleware
             'toscrape.middlewares.DownloaderControlMiddleware': 900,
         },
         'CONTROL_XPATH': 'boolean(//article/div[3]/h2)',        
