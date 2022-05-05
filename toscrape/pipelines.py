@@ -5,13 +5,11 @@
 
 
 # useful for handling different item types with a single interface
-#from itemadapter import ItemAdapter
+from itemadapter import ItemAdapter
 
 import scrapy
 from scrapy.exceptions import DropItem
 from scrapy.pipelines.images import ImagesPipeline
-
-from itemadapter import ItemAdapter
 
 # https://doc.scrapy.org/en/latest/topics/media-pipeline.html#module-scrapy.pipelines.files
 class imgPipeline(ImagesPipeline):    
