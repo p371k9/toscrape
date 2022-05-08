@@ -9,9 +9,9 @@ class JsSpider(scrapy.Spider):
     #start_urls = ['http://quotes.toscrape.com/js-delayed'] 
 
     def parse(self, response):
-        parsed = js2xml.parse(response.xpath('//script/text()').get()) 
-        item = QuoteItem()
+        parsed = js2xml.parse(response.xpath('//script/text()').get())         
         for row in parsed.xpath("//var[@name='data']/array/object"):
+            item = QuoteItem()
             item['author'] = row.xpath("property[@name='author']/object/property[@name='name']/string/text()")[0]
             item['text'] = row.xpath("property[@name='text']/string/text()")[0]
             tags = ''
